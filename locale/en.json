@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DeepSeek Web",
+    "description": "Embeds the real chat.deepseek.com in the Harness through a loopback proxy: one sign-in, then chat, deep-think, web search and file upload exactly as in a browser tab."
+  }
+}

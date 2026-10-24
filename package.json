@@ -1,0 +1,56 @@
+{
+  "name": "dsh-deepseek-web-embed",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Embeds the real chat.deepseek.com inside the DeepSeek Harness Web UI through a loopback proxy: sign in once, then chat there instead of a browser tab.",
+  "icon": "icon.svg",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "chat",
+    "webchat",
+    "embed",
+    "iframe"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": { "platform": "web", "immediately": true, "inject": [] }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/howIdobetter/dsh-deepseek-web-embed.git"
+  },
+  "homepage": "https://github.com/howIdobetter/dsh-deepseek-web-embed#readme",
+  "bugs": {
+    "url": "https://github.com/howIdobetter/dsh-deepseek-web-embed/issues"
+  },
+  "author": "howIdobetter <2079153913@qq.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "DeepSeek 网页版",
+    "description": "把 chat.deepseek.com 原样嵌进 Harness：本机回环代理负责转发，登录一次长期有效，聊天、深度思考、联网搜索、文件上传都和浏览器里一致。"
+  }
+}

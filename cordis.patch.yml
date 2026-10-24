@@ -1,0 +1,11 @@
+# dsh-deepseek-web bundle patch.
+#
+# The Host half owns a loopback reverse proxy for chat.deepseek.com; the Client
+# half embeds the proxied site in a `main` page. `port` is the first port tried
+# (the proxy walks upward if it is taken); keep it fixed so the embedded site
+# keeps its localStorage across restarts.
+- insert:
+    - id: dsh-deepseek-web
+      name: 'dsh-deepseek-web-embed'
+      config:
+        port: 45789

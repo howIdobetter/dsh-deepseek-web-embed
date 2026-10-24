@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="DeepSeek Web">
+  <defs>
+    <linearGradient id="dsw-bg" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4d6bfe"/>
+      <stop offset="1" stop-color="#2f3fb0"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="17" fill="url(#dsw-bg)"/>
+  <path d="M44.6 31.4c0 6.6-5.9 11.9-13.2 11.9-1.4 0-2.8-.2-4.1-.5L18 45.6l2.2-5.8c-1.6-2-2.5-4.4-2.5-6.8 0-6.6 5.9-11.9 13.2-11.9s13.7 5.3 13.7 11.9Z" fill="#ffffff" opacity="0.95"/>
+  <circle cx="26.6" cy="31.2" r="2.1" fill="#2f3fb0"/>
+  <circle cx="33.2" cy="31.2" r="2.1" fill="#2f3fb0"/>
+  <circle cx="39.8" cy="31.2" r="2.1" fill="#2f3fb0"/>
+</svg>
