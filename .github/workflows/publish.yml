@@ -1,0 +1,31 @@
+name: publish
+
+# Publishing runs only when a token is configured, so a missing secret never
+# leaves a red build behind: create an npm automation token and add it as the
+# repository secret NPM_TOKEN, then run this workflow (or publish a release).
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - name: Publish to npm
+        if: ${{ env.NODE_AUTH_TOKEN != '' }}
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Skipped (no NPM_TOKEN secret)
+        if: ${{ env.NODE_AUTH_TOKEN == '' }}
+        run: echo "NPM_TOKEN is not set for this repository; nothing was published."
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
